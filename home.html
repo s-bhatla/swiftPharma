@@ -1,85 +1,113 @@
-<!DOCTYPE hmtl>
+<!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <head>
-        <title>SwiftPhamra</title>
-        <header>
-            <nav>
-                <ul>
-                    <li><img src="/images/pharmaceutical-logo.jpg" height="100px"></li>
-                    <li><button type="menu">Browse</button></li>
-                    <li><input type="text" placeholder="Search.."></li>
-                    <li><button type="submit"><i class="fa fa-search"></i></button></li>
-                    <li><i class="fa fa-user"></i></li>
-                    <li><i class="fa fa-shopping-cart"></i></li>
-                </ul>
-            </nav>
-        <hr>    
-        </header>
-    </head>
-    <body>
-        <div>
-            <section>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="swiftpharma.css">
 
-            </section>
+<head>
+    <title>SwiftPhamra</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <!-- <img class="company-image header-logo" src="/images/pharmaceutical-logo.jpg"> -->
+
+        <nav class="nav main-nav">
+            <!-- <ul> -->
+                <span>
+                    <div class="dropdown">      <!--to create a hover button-->
+                        <button class="button dropbtn">Browse</button>
+                        <div class="dropdown-content">
+                            <a href="https://www.google.com" target="blank">Google</a>
+                            <a href="https://youtube.com" target="blank">Youtube</a>
+                            <a href="https://instagram.com" target="blank">Instagram</a>
+                        </div>
+                    </div>
+                </span>
+                <div class="search-header">
+                    <span><input type="text" placeholder="Search.."></span>
+                    <span>    <button class="button search-btn" type="submit"> <i class="fa fa-search"> </i> </button>    </span>
+                </div>
+                <!-- <div class="user-content"> -->
+                    <span>    <button class="button user-btn" type="button"> <i class="fa fa-user"> </i> </button>   </span>
+                    <span>    <button class="button cart-btn" type="button"> <i class="fa fa-shopping-cart"> </i> </button>   </span>
+                <!-- </div>         -->
+            <!-- </ul> -->
+        </nav>
+    </header>
+
+    <div>
+        <section>
+
+        </section>
+    </div>
+
+    <!--add a background image  -->
+
+    <section>
+        <h1>Best Recommendations</h1>
+        <div>
+            <img src="images/Infant-Cough-Releif-Cofnil-Drop.jpg" height="200px">
+            <div>
+                <span>Cough Drop</span>
+            </div>
+            <div>
+                <span>Rs.200.19</span>
+                <button class="button">ADD TO CART</button>
+            </div>
         </div>
 
-        <!--add a background image  -->
-
-        <section>   
-            <h1>Best Recommendations</h1>
+        <div>
+            <img src="images/Antacids.jpg" height="200px">
             <div>
-                <img src="images/Infant-Cough-Releif-Cofnil-Drop.jpg" height="200px">
-                <div>
-                    <span>Cough Drop</span>
-                </div>
-                <div>
-                    <span>Rs.200.19</span>
-                    <button class="button">ADD TO CART</button>
-                </div>
-            </div>
-
-            <div>
-                <img src="images/Antacids.jpg" height="200px">
-                <div>
-                    <span>Antacids</span>
-                </div>
-                <div>
-                    <span>Rs.200.19</span>
-                    <button class="button">ADD TO CART</button>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h1>Covid Guidelines</h1>
-            <div>
-                <ul>
-                    <li><span>Ghar Baitho Genshin Khelo</span></li>
-                    <li><span>Subah Utho Sab Theek Ho Jeaga</span></li>
-                </ul>
-            </div>
-        </section>
-
-        <footer>
-            <div>
-                <h4>Links</h4>
-                <ul>
-                    <li>Privacy Policy</li>
-                    <li>Shipping Policy</li>
-                    <li>Terms of use</li>
-                </ul>
+                <span>Antacids</span>
             </div>
             <div>
-            <h2>SwiftPhamra</h2>
-            <img src="images/pharmaceutical-logo.jpg" height="100px">
+                <span>Rs.200.19</span>
+                <button class="button">ADD TO CART</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>Covid Guidelines</h1>
+        <div>
             <ul>
-                <h2>Contact</h2>
-                <li><i class="fa fa-globe">Plot No. 417, Industrial Area Phase-9, S.A.S Nagar, Mohali 160062. (Punjab)</i></li>
+                <li><span>Ghar Baitho Genshin Khelo</span></li>
+                <li><span>Subah Utho Sab Theek Ho Jeaga</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h3>Know Us</h3>
+            <ul>
+                <li>Join Us</li>
+                <li>About Us</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Shopping</h3>
+            <ul>
+                <li>Browse by A-Z</li>
+                <li>Sort By Manufacturer</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <h3>Contact</h3>
+                <li><i class="fa fa-globe">Plot No. 417, Industrial Area Phase-9, S.A.S Nagar, Mohali 160062.
+                        (Punjab)</i></li>
                 <li><i class="fa fa-phone">1234567890</i></li>
                 <li><i class="fa fa-envelope-open">SwiftPhamra@abc.com</i></li>
-                
+
             </ul>
-            </div>    
-        </footer>
-    </body>
+        </div>
+
+        <h2 class="sitename">SwiftPhamra</h2>
+        <img src="images/pharmaceutical-logo.jpg" height="100px">
+    </footer>
+</body>
+
 </html>

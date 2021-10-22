@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    color: rgb(246, 246, 246);
+    color: black;
+}
+
+html , body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-color: rgb(50, 174, 176);
+    background-blend-mode: multiply;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 251, 251, 0.3);
+}
+
+/* .nav ul {
+    margin: 0;
+} */
+
+/* .nav li {
+    display: inline-block;
+    align-items: center;
+} */
+
+.nav {
+    margin: 0;
+    padding-top: 20px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.company-image {
+    height: 100px;
+    width: 100px;
+    background-blend-mode: screen;
+}
+
+.header-logo {
+    display: flex;
+    border: none;
+    border-radius: 10%;
+}
+
+.dropdown input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 17px;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3c82b1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(0,0,0, .2);
+    z-index: 1;
+    overflow: auto;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(12,23,43);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: cadetblue;
+}
+
+.button {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.50em;
+    cursor: pointer;
+}
+
+.user-btn {
+    border: none;
+    padding: 7px;
+    font-size: 2em;
+    margin-bottom: 10px;
+    background-color: rgb(50, 174, 176);   
+}
+
+.cart-btn {
+    border: none;
+    padding: 7px;
+    font-size: 2em;
+    margin-bottom: 10px;
+    background-color: rgb(50, 174, 176);   
+}
+
+.search-header {
+    align-items: center;
+}
+
+.search-header input[type=text]{
+    border: none;
+    font-weight: normal;
+    font-size: 1.9em;
+    border-radius: 5px;
+}
+
+.search-btn {
+    border: none;
+    font-size: 21px;
+    margin-bottom: 12px;
+    padding: 7px;
+    border-radius: 5px;
+}
+
