@@ -31,9 +31,9 @@ html , body {
 }
 
 .main-nav {
-    display: flex;
+    display:inline-flex;
     justify-content: center;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
 .company-image {
@@ -134,7 +134,7 @@ html , body {
 
 .search-btn {
     border: none;
-    font-size: 21px;
+    font-size: 19px;
     margin-bottom: 12px;
     padding: 7px;
     border-radius: 5px;
