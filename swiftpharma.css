@@ -12,8 +12,8 @@ html , body {
 .main-header {
     background-color: rgb(50, 174, 176);
     background-blend-mode: multiply;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 251, 251, 0.3);
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 /* .nav ul {
@@ -25,36 +25,30 @@ html , body {
     align-items: center;
 } */
 
-.nav {
+/* .nav {
     margin: 0;
     padding-top: 20px;
-}
+} */
 
 .main-nav {
-    display:inline-flex;
-    justify-content: center;
-    /* justify-content: space-around; */
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
 }
 
-.company-image {
+.image {
     height: 100px;
     width: 100px;
     background-blend-mode: screen;
 }
 
 .header-logo {
-    display: flex;
+    display: inline-block;
     border: none;
     border-radius: 10%;
 }
 
-.dropdown input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-}
+/* dropdown styling start */
 
 .dropdown {
     position: relative;
@@ -64,15 +58,18 @@ html , body {
 .dropbtn {
     background-color: #04AA6D;
     color: white;
+    height: 2.45em;
+    width: auto;
     padding: 16px;
-    font-size: 17px;
+    font-size: 20px;
     border: none;
+    border-radius: 30px 0 0 30px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #3c82b1;
+    background-color: rgb(243, 246, 251);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgb(0,0,0, .2);
     z-index: 1;
@@ -87,7 +84,8 @@ html , body {
 }
 
 .dropdown-content a:hover {
-    background-color: rgb(12,23,43);
+    background-color: rgb(255, 255, 255);
+    color: rgb(50, 174, 176);
 }
 
 .dropdown:hover .dropdown-content {
@@ -95,8 +93,10 @@ html , body {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: cadetblue;
+    background-color: #04aa6dc5;
 }
+
+/* dropdown styling ends */
 
 .button {
     text-align: center;
@@ -105,38 +105,57 @@ html , body {
     cursor: pointer;
 }
 
+.button:hover {
+    /* background-color: rgba(65, 62, 62, 0.55); */
+}
+
 .user-btn {
     border: none;
-    padding: 7px;
-    font-size: 2em;
+    padding: 4px;
+    font-size: 2.5em;
     margin-bottom: 10px;
+    margin-right: 15px;
     background-color: rgb(50, 174, 176);   
 }
 
 .cart-btn {
     border: none;
     padding: 7px;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 10px;
+    margin-left: 15px;
     background-color: rgb(50, 174, 176);   
 }
 
 .search-header {
+    display: flex;
+    height: 3em;
+    width: 60%;
+    border-radius: 30px;
     align-items: center;
+    background-color: white;
+    padding: 10px 0 10px 0;
 }
 
 .search-header input[type=text]{
     border: none;
     font-weight: normal;
-    font-size: 1.9em;
-    border-radius: 5px;
+    font-size: 1.2em;
+    height: 2em;
+    width: 80%;
+    outline: none;
+    padding-left: 10px;
 }
 
 .search-btn {
     border: none;
-    font-size: 19px;
-    margin-bottom: 12px;
-    padding: 7px;
-    border-radius: 5px;
+    height: 3.6em;
+    width: 10%;
+    border-radius: 0 30px 30px 0;
+    background-color: rgb(231, 248, 252);
 }
 
+.fa-search {
+    color: rgb(46, 169, 172);
+    font-size: 2em;
+}
