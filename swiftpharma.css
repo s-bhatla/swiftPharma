@@ -217,7 +217,6 @@ html , body {
     display: flex;
     align-items:baseline;
     justify-content:space-around;
-    /* border-bottom: 2px solid white; */
 
 }
 
@@ -240,30 +239,46 @@ html , body {
 .footer-column-title {
     color: white;
     font-size: 1.5em;
-    /* font-weight:800; */
 }
 
 .footer-bottom {
-    display: inline-block;
-    padding: 20px;
+    display: inline-flex;
+    padding: 0 15px;
     width: 100%;
     border-top: 2px solid rgb(12 ,23 ,43, 0.5);
     background-color: rgb(35, 47, 63);
     color: white;
     font-weight: lighter;
     font:medium;
-    text-align: center;
+    align-items: center;
     position: absolute;
 }
 
-/* .footer-bottom:after {
-    content: '';
-    display: block;
-    position:absolute;
-    width: 80%;
-    border-top: 2px solid #898989;
-    margin-top: 8px;
-} */
+.footer-bottom ul {
+    display: inline;
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-bottom-list a {
+    padding: 2px;
+    text-decoration: none;
+}
+
+.footer-bottom-list li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.copyright {
+    color: white;
+}
+
+.footer-img {
+    height: 40px;
+    width: auto;
+    border-radius: 10%;
+}
 
 
 /* footer styling ends here */
