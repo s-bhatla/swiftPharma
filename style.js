@@ -1,6 +1,4 @@
 
-
-
 // sticky header
 
 var header = document.getElementById("get-header")
@@ -179,3 +177,33 @@ function bannerloopprev() {
         bannerStatus = 2;
     }
 }
+
+$(document).ready(function(){
+var forml = $("#forml");
+var formr = $("#formr");
+var username= $("#idusername");
+var email= $("#idemail");
+var password = $("#idpassword");
+
+
+//On Submitting
+forml.submit(function(){
+    if(email.val().length==0 || password.val().length==0){
+                    alert('Please enter the email');
+        return false;
+                    }
+    else
+    {
+                if(password.val().length==0)
+                    {
+                        alert('Please enter the password');
+                        return false;
+                    }
+
+                 else
+                    return true;
+    }
+});
+
+
+});
