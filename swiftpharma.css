@@ -208,6 +208,7 @@ html , body {
 .footer {
     height: 250px;
     width: 100%;
+    position: fixed;
 }
 
 .main-footer {
