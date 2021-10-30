@@ -139,10 +139,6 @@ html , body {
     cursor: pointer;
 }
 
-.button:hover {
-    /* background-color: rgba(65, 62, 62, 0.55); */
-}
-
 .user-btn {
     border: none;
     padding: 4px;
@@ -208,7 +204,7 @@ html , body {
 .footer {
     height: 250px;
     width: 100%;
-    position: fixed;
+    justify-content: baseline;
 }
 
 .main-footer {
@@ -389,11 +385,12 @@ html , body {
     justify-content: center;
 }
 
-.shop-section {
+.shop-row {
     display: inline-flex;
     justify-content: space-around;
     padding: 0 10px 20px 20px;
     overflow-x: hidden;
+    align-items: center;
 }
 
 /* decrease size of the box */
@@ -421,6 +418,7 @@ html , body {
     height: 150px;
     width: 150px;
     border-radius: 10px;
+    object-fit:contain;
 }
 
 .card-product-name {
@@ -452,4 +450,81 @@ html , body {
     color: white;
     font-size: 1em;
     border-radius: 10px;
+}
+
+
+/***** Guideline Articles Section*****/
+
+.guidelines {
+    height: 320px;
+    margin: 0;
+    background-image: linear-gradient(rgb(239, 66, 129) 50%, rgb(255, 255, 255) 50%);
+    /* border: solid 2px rgb(35, 47, 63); */
+    justify-content:center;   
+    /* align-items: center; */
+}
+
+
+.guidelines-title {
+    top: 0;
+    padding: 10px 0 0 30px;
+    font-weight: bolder;
+    font-size: 2em;
+    color:white;
+}
+
+.guidelines-row {
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 0 10px 20px 20px;
+    overflow-x: hidden;
+    align-items: center;
+}
+
+.guidelines-card {
+    height: 180px;
+    width: 300px;
+    margin: 0 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.guidelines-card-img {
+    height: 120px;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+    object-fit:cover;
+}
+
+.guidelines-card-name {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.guidelines a {
+    text-decoration: none;
+}
+
+.row-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.row-btn:hover {opacity: 0.8;}
+
+.previous-button {
+    background: url("/images/prev-button.png") no-repeat !important;  
+    left: 10px; 
+}
+
+.next-button {
+    background: url("/images/next-button.png") no-repeat !important;
+    right: 10px;
 }
