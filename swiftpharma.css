@@ -520,7 +520,7 @@ html , body {
 .row-btn:hover {opacity: 0.8;}
 
 .previous-button {
-    background: url("/images/prev-button.png") no-repeat !important;  
+    background: url("/images/prev-button.png") no-repeat !important; 
     left: 10px; 
 }
 
