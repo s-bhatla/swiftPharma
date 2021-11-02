@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="swiftpharma.css">
+<!-- <script src="style.js" async></script> -->
+
+<head>
+    <title>SwiftPhamra-Item-display</title>
+</head>
+
+<body>
+    <header class="main-header" id="get-header">
+
+        <nav class=" nav main-nav">
+            <a href="home.html" target="blank"><img class="image header-logo"
+                    src="/images/pharmacy-logo-by-Vexels.png"></a>
+
+            <div class="search-header">
+                <div class="dropdown">
+                    <!--to create a hover button-->
+                    <button class="button dropbtn">Browse</button>
+                    <div class="dropdown-content">
+                        <a href="https://www.google.com" target="blank">Google</a>
+                        <a href="https://youtube.com" target="blank">Youtube</a>
+                        <a href="https://instagram.com" target="blank">Instagram</a>
+                    </div>
+                </div>
+                <input type="text" placeholder="Search..">
+                <button class="button search-btn" type="submit"> <i class="fa fa-search"> </i> </button>
+            </div>
+            <div class="user-content">
+                <span> <button class="button user-btn" type="button"> <i class="fa fa-user"> </i> </button> </span>
+                <span> <button class="button cart-btn" type="button"> <i class="fa fa-shopping-cart"> </i> </button>
+                </span>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <div class="content">
+
+        <section class="item-display">
+            <div class="item-img">
+                <img src="/images/Infant-Cough-Releif-Cofnil-Drop.jpg" height="500px"> <!--data take from DB-->
+            </div>
+            <div class="item-details-column">
+            
+                <h1>product name</h1>                           <!--data take from DB-->
+                <span>type : category</span>                    <!--data take from DB-->
+                <div class="item-price-details">
+                    <span>Price</span>                          <!--data take from DB-->
+                    <span>(Inclusive of all taxes)</span>       <!-- to add a quantity input button-->
+                    <span>*This product cannot be returned for a refund or exchange.</span>
+                    <span>* Mkt: Procter & Gamble</span>        <!--data take from DB-->
+                    <span>* Dosage:</span>                      <!--data take from DB-->
+                    <span>* Stock</span>                        <!--data take from DB-->
+                </div>
+                <span>Manufacturer</span>
+                <button type="button">Add to Cart</button>
+                <div class="pincode">
+                    <span>PINCODE:</span>                       <!--data take from DB-->
+                    <hr>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-details">                       <!--data take from DB-->
+            <div column manufacturer-details>
+                <span>Barcode: </span>                          
+                <span>Company contact no: </span>               
+                <span>Company Email: </span>                    
+                <span>Name of Manufacturer/Marketer: </span>    
+                <span>Warehouse ID: </span>                     
+                <span>Warehouse Address: </span>               
+                
+            </div>    
+
+        </section>
+        <hr>
+
+        <section class="shop Similar-products">
+            <h2 class="shop-title">Similar Products</h2>
+            <div class="shop-row">
+                <div class="card-product">
+                    <img class="card-product-img" src="images/Infant-Cough-Releif-Cofnil-Drop.jpg">
+                    <div>
+                        <span class="card-product-name">Cough Drop</span>
+                    </div>
+                    <div class="card-product-price-content">
+                        <span class="card-product-content">Best Price* </span>
+                        <span class="card-product-price">Rs.200.19</span>
+                    </div>
+                    <button class="button card-product-btn">ADD TO CART</button>
+                </div>
+    
+                <div class="card-product">
+                    <img class="card-product-img" src="images/Antacids.jpg">
+                    <div>
+                        <span class="card-product-name">Antacids</span>
+                    </div>
+                    <div class="card-product-price-content">
+                        <span class="card-product-content">Best Price* </span>
+                        <span class="card-product-price">Rs.200.19</span>
+                    </div>
+                    <button class="button card-product-btn">ADD TO CART</button>
+                </div>
+                <div class="row-btn previous-button"></div>
+                <div class="row-btn next-button"></div>
+            </div>
+        </section>
+
+
+
+
+        <footer class="footer main-footer">
+            <div class="nav container main-footer-container">
+                <div class="column know-us">
+                    <ul class="main-footer-nav">
+                        <span class="footer-column-title">Know Us</span>
+                        <li>Join Us</li>
+                        <li>About Us</li>
+                    </ul>
+                </div>
+
+                <div class="cloumn shopping">
+                    <ul class="main-footer-nav">
+                        <span class="footer-column-title">Shopping</span>
+                        <li>Browse by A-Z</li>
+                        <li>Sort By Manufacturer</li>
+                    </ul>
+                </div>
+
+                <div class="column contact">
+                    <ul class="main-footer-nav">
+                        <span class="footer-column-title">Contact</span>
+                        <li><i class="fa fa-globe">Plot No. 417, Industrial Area Phase-9, S.A.S Nagar, Mohali 160062.
+                                (Punjab)</i></li>
+                        <li><i class="fa fa-phone">1234567890</i></li>
+                        <li><i class="fa fa-envelope-open">SwiftPhamra@abc.com</i></li>
+
+                    </ul>
+                </div>
+
+                <div class="column website-info">
+                    <h2 class="sitename">SwiftPharma</h2>
+                    <img class="image footer-logo" src="images/pharmacy-logo-by-Vexels.png">
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <!-- <div class="footer-bottom-container"> -->
+                <span class="copyright">&copy; Swiftpharma | Website Designed And Managed By : Genshin Gang</span>
+                <ul class="footer-bottom-list">
+                    <li><a href="https://www.facebook.com" target="blank"><img class="image footer-img"
+                                src="images/logo-facebook.png" alt="click to go to facebook"></li>
+                    <li><a href="https://www.instagram.com" target="blank"><img class="image footer-img"
+                                src="/images/logo-instagram.png"></li>
+                    <li><a href="https://www.twitter.com" target="blank"><img class="image footer-img"
+                                src="/images/logo-twitter.png"></li>
+                </ul>
+                <!-- </div> -->
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

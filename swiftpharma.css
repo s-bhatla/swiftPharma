@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
     box-sizing: border-box;
     color: rgb(246, 246, 246);
@@ -8,20 +7,27 @@
 html , body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    position: static;
+    min-height: 100%;
+}
+
+.html {
+    position: absolute;
+}
+    
+.body {
+    position: relative;
 }
 
 /**** styling main header ****/
 
 .main-header {
+    height: 120px;
     width: 100%;
     background-color: rgb(50, 174, 176);
     background-blend-mode: multiply;
     padding: 5px 0;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     top: 0;
-    position: fixed;
     z-index: 10000;
 }
 
@@ -30,8 +36,24 @@ html , body {
 .sticky {
     position: fixed;
     width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     top: 0;
 }
+
+.container-header {
+    padding: 40px;
+  }
+  
+  .container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .imgcontainer {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+  }
 
 .content {
     margin-top: 20px;
@@ -88,6 +110,7 @@ html , body {
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 10000;         /****has to find other way for it***/
 }
 
 .dropbtn {
@@ -206,14 +229,16 @@ html , body {
     height: 250px;
     width: 100%;
     justify-content: baseline;
+    /* position:absolute; */
+    bottom: 0;
 }
 
 .main-footer {
     background-color: rgb(35, 47, 63);
     color: white;
     padding: 1 0;
+    margin-top: 60px;    /* to be fixed later(make the footer stick to the bottom of the page) */
     border-top: 2px soild rgba(0, 0, 0, 0.2);
-    position: relative;
 }
 
 .main-footer-container {
@@ -224,10 +249,11 @@ html , body {
 }
 
 .column {
-    /* margin: 10px auto; */
-    /* padding: 0 20px; */
     padding: 0.5em;
+    text-align: left;
+    display: flex;
 }
+
 
 .main-footer-nav li {
     color: white;
@@ -283,7 +309,10 @@ html , body {
     border-radius: 10%;
 }
 
-
+.website-info {
+    text-align: center;
+    display: block;
+}
 /**** footer styling ends here ****/
 
 /***** rotating banner styling ******/
@@ -295,7 +324,6 @@ html , body {
     /* background-color: rgb(126, 12, 12); */
     overflow: hidden;
     position: relative;
-    margin-top: 150px;
 }
 
 .rotating-banner .imgban {
@@ -529,354 +557,25 @@ html , body {
     background: url("/images/next-button.png") no-repeat !important;
     right: 10px;
 }
-=======
-* {
-    box-sizing: border-box;
-    color: rgb(246, 246, 246);
-    color: black;
-}
 
-html , body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    position: static;
-}
 
-.header-style{
-  color: blue;
-}
-/**** styling main header ****/
+/* search-result page styling */
 
-.main-header {
+.search-result {
+    /* height: 200px; */
     width: 100%;
-    background-color: rgb(50, 174, 176);
-    background-blend-mode: multiply;
-    padding: 5px 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-    top: 0;
-    position: fixed;
-    z-index: 10000;
-}
-
-.sticky {
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-.container-header {
-  padding: 40px;
-}
-
-.container {
-  padding: 20px;
-  text-align: center;
-}
-
-.imgcontainer {
-  height: 200px;
-  width: 200px;
-  margin: 10px;
-}
-
-.content {
-    margin-top: 70px;
-    padding: 16px;
+    padding: 10px;
     position: static;
-}
-
-.sticky + .content {
-    padding-top: 100px;
-}
-
-
-/**** styling main header ends ****/
-/* .nav ul {
-    margin: 0;
-} */
-
-/* .nav li {
-    display: inline-block;
-    align-items: center;
-} */
-
-/* .nav {
-    margin: 0;
-    padding-top: 20px;
-} */
-
-.sitename {
-    color: white;
-    font-weight: bolder;
-}
-
-.main-nav {
-    display:flex;
-    justify-content: space-around;
-    align-items:center;
-    /* z-index:1001; */
-}
-
-.image {
-    height: 100px;
-    width: 100px;
-    background-blend-mode: screen;
-}
-
-.header-logo {
-    display: inline-block;
-    border: none;
-    border-radius: 10%;
-}
-
-/* dropdown styling start */
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    height: 2.45em;
-    width: auto;
-    padding: 16px;
-    font-size: 20px;
-    border: none;
-    border-radius: 30px 0 0 30px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(243, 246, 251);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgb(0,0,0, .2);
-    z-index: 1;
-    overflow: auto;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+    /* border: 2px solid black; */
     display: block;
 }
 
-.dropdown-content a:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(50, 174, 176);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #04aa6dc5;
-}
-
-/* dropdown styling ends */
-
-.button {
-    text-align: center;
-    vertical-align: middle;
-    padding: 0.50em;
-    cursor: pointer;
-}
-
-.button:hover {
-    /* background-color: rgba(65, 62, 62, 0.55); */
-}
-
-.user-btn {
-    border: none;
-    padding: 4px;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    margin-right: 15px;
-    background-color: rgb(50, 174, 176);
-}
-
-.cart-btn {
-    border: none;
-    padding: 7px;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    margin-left: 15px;
-    background-color: rgb(50, 174, 176);
-}
-
-.search-header {
-    display: flex;
-    height: 3em;
-    width: 60%;
-    border-radius: 30px;
-    align-items: center;
-    background-color: white;
-    padding: 10px 0 10px 0;
-}
-
-.search-header input[type=text]{
-    border: none;
-    font-weight: normal;
+.result-announce {
     font-size: 1.2em;
-    height: 2em;
-    width: 80%;
-    outline: none;
-    padding-left: 10px;
 }
 
-.search-btn {
-    border: none;
-    height: 3.6em;
-    width: 10%;
-    border-radius: 0 30px 30px 0;
-    background-color: rgb(205, 236, 243);
-}
-
-.search-btn:hover {
-    background-color: rgb(35, 47, 63);
-    /* color: rgb(35, 47, 63); */
-}
-
-/* .search-btn:hover .fa-search {
-    color: rgb(35, 47, 63);
-/* } */
-
-.fa-search {
-    color: rgb(46, 169, 172);
-    font-size: 2em;
-}
-
-
-/**** footer styling starts here ****/
-.footer {
-    height: 250px;
-    width: 100%;
-}
-
-.main-footer {
-    background-color: rgb(35, 47, 63);
-    color: white;
-    padding: 1 0;
-    border-top: 2px soild rgba(0, 0, 0, 0.2);
-    position: relative;
-}
-
-.main-footer-container {
-    display: flex;
-    align-items:baseline;
-    justify-content:space-around;
+.result-announce::after {
+    content: "";
+    font-weight: bold;
 
 }
-
-.column {
-    /* margin: 10px auto; */
-    /* padding: 0 20px; */
-    padding: 0.5em;
-}
-
-.main-footer-nav li {
-    color: white;
-    padding: 10px 0;
-    list-style-type: none;
-}
-
-.fa {
-    color: white;
-}
-
-.footer-column-title {
-    color: white;
-    font-size: 1.5em;
-}
-
-.footer-bottom {
-    display: inline-flex;
-    padding: 0 15px;
-    width: 100%;
-    border-top: 2px solid rgb(12 ,23 ,43, 0.5);
-    background-color: rgb(35, 47, 63);
-    color: white;
-    font-weight: lighter;
-    font:medium;
-    align-items: center;
-    position: absolute;
-}
-
-.footer-bottom ul {
-    display: inline;
-    flex-grow: 1;
-    text-align: end;
-}
-
-.footer-bottom-list a {
-    padding: 2px;
-    text-decoration: none;
-}
-
-.footer-bottom-list li {
-    display: inline-block;
-    list-style-type: none;
-}
-
-.copyright {
-    color: white;
-}
-
-.footer-img {
-    height: 40px;
-    width: auto;
-    border-radius: 10%;
-}
-
-
-/**** footer styling ends here ****/
-
-/***** rotating banner styling ******/
-
-.rotating-banner {
-    margin: 30px auto;
-    width: 1200px;
-    height: 400px;
-    /* background-color: rgb(126, 12, 12); */
-    overflow: hidden;
-    position: relative;
-    margin-top: 150px;
-}
-
-.rotating-banner .imgban {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    transition: all ease-in-out 500ms;
-}
-
-.rotating-banner #imgban1 {
-    background-image: url("images/banner_1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.rotating-banner #imgban2 {
-    background-image: url("images/banner_2.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.rotating-banner #imgban3 {
-    background-image: url("images/banner_3.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-
-
-/***** rotating banner styling ends******/
->>>>>>> origin/main
