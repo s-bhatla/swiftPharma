@@ -646,7 +646,7 @@ html , body {
 
 
 
-.result-block .buy-btn {
+.buy-btn {
     width: 100px;
     height: 50px;
     margin-top: auto !important;
@@ -658,4 +658,135 @@ html , body {
     font-size: 1em;
     color: white;
     font-weight: bold;
+}
+
+
+/* Item display styling */
+
+.item-display {
+    display: inline-flex;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+    /* border: 1px solid black; */
+    padding: 0;
+    width: 96%;
+    margin: 0 1em;
+    border-radius: 10px;
+}
+
+.item-img {
+    height: 500px;
+    padding: 0;
+    /* border: 1px solid blue; */
+}
+
+.item-details-column {
+    padding: 0 20px 20px 20px;
+    margin: 0;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.item-title {
+    font-size: 35px;
+    font-weight: lighter;
+    color: rgb(66, 65, 68);
+}
+
+.item-details-column span{
+    display: block;
+}
+
+.item-details-column .category {
+    font-weight: lighter;
+    background-color: rgb(243, 243, 243);
+    border-radius: 5px;
+    width:max-content;
+    background-clip:content-box;
+}
+
+.item-details-column .title {
+    border-bottom: 1px solid rgb(200, 200, 208);
+    padding-bottom: 15px;
+}
+
+.item-price-details {
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(200, 200, 208);
+}
+
+.item-price-details span {
+    color: gray;
+}
+
+.item-price-details .price {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.item-price-details .price::after {
+    color: rgb(213, 81, 116);
+    font-size: 1.55em;
+}
+
+.item-price-details .hardcode-content {
+    padding: 2px 0;
+}
+
+.item-price-details .Dosage {
+    color: black;
+    font-size: 1.2em;
+    margin: 5px 0 2px 0;
+}
+
+.item-price-details .buy-btn {
+    margin-left: 0;
+    margin-top: 20px !important;
+    width: 150px;
+    font-size: 1.2em;
+}
+
+.item-details-column .pincode {
+    margin-top: 20px;
+    max-width: max-content;
+    align-items:baseline;
+    /* border: 1px solid brown; */
+    font-size: 1.5em;
+    border-bottom: 5px solid rgb(51, 140, 150);
+    border-radius: 2px;
+}
+
+.pincode span {
+    color: rgb(77, 186, 199);
+}
+
+
+.product-details {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blueviolet; */
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+    padding: 0 10px 10px 10px;
+    width: 96%;
+    margin: 1em;
+    border-radius: 5px;
+}
+
+.product-details .title {
+    color: gray;
+    padding: 10px 0 0 10px;
+
+}
+
+.product-details span {
+    display: block;
+    /* border: 1px solid yellow; */
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: gray;
+}
+
+.product-details span::after{
+    float: right;
 }
