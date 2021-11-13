@@ -1,0 +1,46 @@
+<%-include('header');-%>
+
+<div class="content">
+    <section>
+            <div class="container-header">
+              <div class="container">
+                <img src="/images/mask.png" class="imgcontainer" alt="Avatar" class="avatar">
+              </div>
+
+              <form action="/auths/login" method="POST">
+                <div class="container">
+                  <label for="email"><b>Email-ID</b></label>
+                  <input type="email" placeholder="Enter Email-ID" name="email" id="email" required>
+                </div>
+
+                <div class="container">
+                  <label for="password"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                </div>
+
+                <div class="container">
+                  <button type="submit">Login</button>
+                  <div class="container">
+                    <!--fluff-->
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
+                    <!--fluff-->
+                  </div>
+                </div>
+              </form>
+
+              <div class="container" style="background-color:#f1f1f1">
+                <form action="/">
+                  <input type="submit" value="Cancel">
+                </form>
+                <div>Not a user?<a href="/auths/register"> Register here.</a></div>
+                  <!--fluff-->
+                <div>Forgot <a href="/">password?</a></div>
+                <!--fluff-->
+              </div>
+              </div>
+  </section>
+  </div>
+
+<%-include('footer');-%>
