@@ -96,6 +96,7 @@ function checkAuthenticated(req, res, next){
         next()
     }
     else{
+        req.session.returnTo = req.originalUrl; 
         res.redirect('/auths/login')
     }
 }
