@@ -1,8 +1,10 @@
 <%-include('header');-%>
 
 <div class="content">
-<% if(list.length === 0){ %> 
-    <h2>No items found</h2>
+<% if(list.length === 0){ %>
+    <div no-result>
+        <img class="no-result-img" src="/images/no-result-bg.png" alt="no-result-bg">
+    </div>
 <% } else{ %>
     <section class="search-result">
         <%if(locals.query){%>

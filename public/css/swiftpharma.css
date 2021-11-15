@@ -431,21 +431,20 @@ a{
     height: 400px;
     padding: 0 0 10px 0;
     margin: 0;
-    background-image: linear-gradient(#5AD3DF 60%, rgb(255, 255, 255) 40%);
+    background-image: linear-gradient(#5AD3DF 50%, rgb(255, 255, 255) 50%);
     /* border: solid 2px rgb(35, 47, 63); */
     justify-content: center;
     
 }
 
 .shop-row {
+    height: max-content;
     display: inline-flex;
     justify-content: space-around;
-    padding: 0 10px 20px 20px;
-    overflow: hidden;
-    align-items: center;
+    column-gap: 4em;
+    /* border: 1px solid black; */
+    height: auto;
 }
-
-/* decrease size of the box */
 
 .shop-title {
     top: 0;
@@ -458,12 +457,10 @@ a{
     height: 280px;
     padding: 10px;
     width: 220px;
-    margin: 0 10px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     text-align: center;
-    overflow: hidden;
 }
 
 .card-product-img {
@@ -513,12 +510,14 @@ a{
 /***** Guideline Articles Section*****/
 
 .guidelines {
-    height: 320px;
+    height: 300px;
+    width: 100%;
     margin: 0;
     background-image: linear-gradient(rgb(236, 108, 155) 50%, rgb(255, 255, 255) 50%);
-    /* border: solid 2px rgb(35, 47, 63); */
-    justify-content:center;   
-    /* align-items: center; */
+    position: relative;
+    /* border: solid 2px rgb(35, 47, 63); */ 
+    justify-content:center;
+    /* border: 1px solid black; */
 }
 
 
@@ -531,17 +530,16 @@ a{
 }
 
 .guidelines-row {
+    width: 100%;
     display: inline-flex;
-    justify-content: space-around;
-    padding: 0 10px 20px 20px;
-    overflow-x: hidden;
+    justify-content: space-evenly;
+    column-gap: 20px;
     align-items: center;
 }
 
 .guidelines-card {
-    height: 180px;
+    height: 200px;
     width: 300px;
-    margin: 0 10px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -550,7 +548,7 @@ a{
 }
 
 .guidelines-card-img {
-    height: 120px;
+    height: 150px;
     width: 100%;
     border-radius: 10px 0 0 10px;
     object-fit:cover;
@@ -895,7 +893,6 @@ a{
     width: 100%;
     column-count: 3;
     column-gap: 40px;
-    overflow: hidden;
 }
 
 .card-categories-img {
@@ -914,4 +911,68 @@ a{
 .categories-name {
     margin: 2px 0;
     font-size: 1.5em;
+}
+
+.no-result {
+    margin: auto;
+    height: auto;
+    width: auto;
+}
+
+.no-result-img {
+    display: block;
+    margin: auto;
+    width: auto;
+    opacity: 0.7;
+}
+
+/* card slider */
+
+.card-slider {
+    width: 100%;
+    display: flex;
+    position: relative;
+    /* background-image: linear-gradient(rgb(239, 66, 129) 60%, rgb(255,255,255) 40%); */
+    text-align: center;
+    /* align-items: center; */
+    margin: 0px auto 10px auto;
+}
+
+.card-slider .carousel-inner {
+    height: 100%;
+    width: 100%;
+}
+
+.card-slider .carousel-inner .carousel-item {
+    justify-content: center;
+    transition: ease-in-out 200ms !important;
+}
+
+.card-slider .carousel-inner .carousel-item .card-wrapper {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* categories-slider */
+
+.categories-slider {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    margin: 0px auto 10px auto;
+}
+
+
+.categories-slider .carousel-inner {
+    width: 100%;
+}
+
+.categories-slider .carousel-inner .carousel-item {
+    margin-top: 10px;
+    justify-content: center;
+    transition: ease-in-out 200ms !important;
 }
