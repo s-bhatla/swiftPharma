@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/login', checkNotAuthenticated, passport.authenticate('local', {
-    successReturnToOrRedirect: "/",
+    successRedirect: "/",
     failureRedirect: '/auths/login',
     // failureFlash: true WORKS FOR NOW
 }))
@@ -81,7 +81,6 @@ function checkAuthenticated(req, res, next){
         next()
     }
     else{
-        req.session.returnTo = req.originalUrl;
         res.redirect('/auths/login')
     }
 }
