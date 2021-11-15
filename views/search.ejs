@@ -1,0 +1,35 @@
+<%-include('header');-%>
+
+<div class="content">
+<% if(list.length === 0){ %>
+    <div no-result>
+        <img class="no-result-img" src="/images/no-result-bg.png" alt="no-result-bg">
+    </div>
+<% } else{ %>
+    <section class="search-result">
+        <%if(locals.query){%>
+        <span class="result-announce">Showing all Results for "<%= query %>" : </span>
+        <%}%>
+    <% } %> 
+
+    <% for(var i = 0; i < list.length; i++){ %> 
+
+        <div class="result-block">
+            <a href="/product/<%= list[i].barcode%>">
+            <img class="card-product-img" src="/images/<%=list[i].barcode%>.png"></a>
+            <div class="product-info">
+                    <span class="name"><a href="/product/<%= list[i].barcode%>"><%= list[i].d_name %></a></span>
+                    <span class="category"><%= list[i].d_category %></span>                               <!--data take from DB-->
+                    <span class="price">PRICE : <%= list[i].price %></span>
+                    <span class="manufacturer">MKD BY : <%= list[i].c_name %></span>
+            </div>
+            <button class="button buy-btn" type="button"><a href="/product/<%=list[i].barcode%>/order">BUY</a></button>
+    </div>
+    <% } %>
+    </section>
+    
+
+</div>
+
+
+<%-include('footer');-%>

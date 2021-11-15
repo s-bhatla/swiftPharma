@@ -1,0 +1,923 @@
+<%-include('header');-%>
+
+<div class="content">
+    <div class="content">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" id="imgban1"></div>
+                <div class="carousel-item" id="imgban2"></div>
+                <div class="carousel-item" id="imgban3"></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    <!-- <section class="categories">
+        <h2 class="categories-title">Shop By Category</h2>
+        <div class="shop-row">
+            <div class="categories-card">
+                <a href="">
+                    <img class="card-categories-img" src="/images/antibiotics.jpg" alt="category">
+                </a>
+                <span class="categories-name">Antibiotics</span>
+            </div>
+            <div class="categories-card">
+                <a href="">
+                    <img class="card-categories-img" src="/images/antidepressants.jpg" alt="category">
+                </a>
+                <span class="categories-name">Anti-Depressants</span>
+            </div>
+            <div class="categories-card">
+                <a href="">
+                    <img class="card-categories-img" src="/images/antifungals.jpg" alt="category">
+                </a>
+                <span class="categories-name">Anti-Fungals</span>
+            </div>
+            <div class="row-btn previous-button"></div>
+            <div class="row-btn next-button"></div>
+        </div>
+    </section> -->
+
+    <section class="categories">
+        <h2 class="categories-title">Shop By Category</h2>
+        <div id="categories" class="carousel slide categories-slider" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="shop-row">
+                        <div class="categories-card">
+                            <a href="">
+                                <img class="card-categories-img" src="/images/antibiotics.jpg" alt="category">
+                            </a>
+                            <span class="categories-name">Antibiotics</span>
+                        </div>
+                        <div class="categories-card">
+                            <a href="">
+                                <img class="card-categories-img" src="/images/antidepressants.jpg" alt="category">
+                            </a>
+                            <span class="categories-name">Anti-Depressants</span>
+                        </div>
+                        <div class="categories-card">
+                            <a href="">
+                                <img class="card-categories-img" src="/images/antifungals.jpg" alt="category">
+                            </a>
+                            <span class="categories-name">Anti-Fungals</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="shop-row">
+                        <div class="categories-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-103.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="categories-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-104.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="categories-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-115.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="shop-row">
+                        <div class="categories-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-116.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="categories-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-118.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="categories-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-119.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#categories"
+                data-bs-slide="prev">
+                <div class="row-btn previous-button"></div>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#categories"
+                data-bs-slide="next">
+                <div class="row-btn next-button"></div>
+            </button>
+        </div>
+    </section>
+    <!-- <div id="carouselExampleControls" class="carousel slide card-slider" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card-wrapper">
+                    <div class="guidelines-card">
+                        <a href="https://www.github.com" target="blank">
+                            <img class="guidelines-card-img" src="/public/images/D-100.png">
+                            <span class="guidelines-card-name">Articles Title</span>
+                        </a>
+                    </div>
+                    <div class="guidelines-card">
+                        <a href="https://www.github.com" target="blank">
+                            <img class="guidelines-card-img" src="/public/images/D-101.png">
+                            <span class="guidelines-card-name">Articles Title</span>
+                        </a>
+                    </div>
+                    <div class="guidelines-card">
+                        <a href="https://www.github.com" target="blank">
+                            <img class="guidelines-card-img" src="/public/images/D-102.png">
+                            <span class="guidelines-card-name">Articles Title</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card-wrapper">
+                    <div class="guidelines-card">
+                        <a href="https://www.github.com" target="blank">
+                            <img class="guidelines-card-img" src="/public/images/D-103.png">
+                            <span class="guidelines-card-name">Articles Title</span>
+                        </a>
+                    </div>
+                    <div class="guidelines-card">
+                        <a href="https://www.github.com" target="blank">
+                            <img class="guidelines-card-img" src="/public/images/D-104.png">
+                            <span class="guidelines-card-name">Articles Title</span>
+                        </a>
+                    </div>
+                    <div class="guidelines-card">
+                        <a href="https://www.github.com" target="blank">
+                            <img class="guidelines-card-img" src="/public/images/D-115.png">
+                            <span class="guidelines-card-name">Articles Title</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card-wrapper">
+                    <div class="guidelines-card">
+                        <a href="https://www.github.com" target="blank">
+                            <img class="guidelines-card-img" src="/public/images/D-116.png">
+                            <span class="guidelines-card-name">Articles Title</span>
+                        </a>
+                    </div>
+                    <div class="guidelines-card">
+                        <a href="https://www.github.com" target="blank">
+                            <img class="guidelines-card-img" src="/public/images/D-118.png">
+                            <span class="guidelines-card-name">Articles Title</span>
+                        </a>
+                    </div>
+                    <div class="guidelines-card">
+                        <a href="https://www.github.com" target="blank">
+                            <img class="guidelines-card-img" src="/public/images/D-119.png">
+                            <span class="guidelines-card-name">Articles Title</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <div class="row-btn previous-button"></div>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <div class="row-btn next-button"></div>
+            </button>
+    </div> -->
+    
+    <section class="shop">
+        <h2 class="shop-title">Items On Sale</h2>
+        <div id="shop" class="carousel slide card-slider" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="shop-row">
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-121.png">
+                                <div>
+                                    <span class="card-product-name">Cough Drop</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.327</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-134.png">
+                                <div>
+                                    <span class="card-product-name">Sporlac</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.105</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="shop-row">
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-121.png">
+                                <div>
+                                    <span class="card-product-name">Cough Drop</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.327</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-134.png">
+                                <div>
+                                    <span class="card-product-name">Sporlac</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.105</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="shop-row">
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-121.png">
+                                <div>
+                                    <span class="card-product-name">Cough Drop</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.327</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-134.png">
+                                <div>
+                                    <span class="card-product-name">Sporlac</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.105</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#shop" data-bs-slide="prev">
+                    <div class="row-btn previous-button"></div>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#shop" data-bs-slide="next">
+                    <div class="row-btn next-button"></div>
+                </button>
+        </div>
+    </section>
+
+    <!-- <section class="shop">
+        <h2 class="shop-title">Items On Sale</h2>
+        <div class="shop-row">
+            <div class="card-product">
+                <a href="">
+                    <img class="card-product-img" src="images/D-121.png">
+                    <div>
+                        <span class="card-product-name">Cough Drop</span>
+                    </div>
+                    <div class="card-product-price-content">
+                        <span class="card-product-content">Best Price* </span>
+                        <span class="card-product-price">Rs.327</span>
+                    </div>
+                </a>
+                <button class="button card-product-btn">ADD TO CART</button>
+            </div>
+
+            <div class="card-product">
+                <a href="">
+                    <img class="card-product-img" src="images/D-134.png">
+                    <div>
+                        <span class="card-product-name">Sporlac</span>
+                    </div>
+                    <div class="card-product-price-content">
+                        <span class="card-product-content">Best Price* </span>
+                        <span class="card-product-price">Rs.105</span>
+                    </div>
+                </a>
+                <button class="button card-product-btn">ADD TO CART</button>
+            </div>
+
+            <div class="card-product">
+                <a href="">
+                    <img class="card-product-img" src="images/D-130.png">
+                    <div>
+                        <span class="card-product-name">YOHIMBINUM MT</span>
+                    </div>
+                    <div class="card-product-price-content">
+                        <span class="card-product-content">Best Price* </span>
+                        <span class="card-product-price">Rs.315</span>
+                    </div>
+                </a>
+                <button class="button card-product-btn">ADD TO CART</button>
+            </div>
+            <div class="row-btn previous-button"></div>
+            <div class="row-btn next-button"></div>
+        </div>
+    </section> -->
+
+    <!-- <section class="guidelines">
+        <h2 class="guidelines-title">Covid Precaution articles</h2>
+        <div class="guidelines-row">
+            <a href="https://www.github.com" target="blank">
+                <div class="guidelines-card">
+                    <img class="guidelines-card-img" src="images/banner_1.png">
+                    <span class="guidelines-card-name">Articles Title</span>
+                </div>
+            </a>
+            <div class="row-btn previous-button"></div>
+            <div class="row-btn next-button"></div>
+        </div>
+    </section> -->
+
+    <section class="guidelines">
+        <h2 class="guidelines-title">Covid Precaution Articles</h2>
+        <div id="covid" class="carousel slide card-slider" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="guidelines-row">
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-100.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-101.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-102.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="guidelines-row">
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-103.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-104.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-115.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="guidelines-row">
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-116.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-118.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-119.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#covid" data-bs-slide="prev">
+                <div class="row-btn previous-button"></div>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#covid" data-bs-slide="next">
+                <div class="row-btn next-button"></div>
+            </button>
+        </div>
+    </section>
+
+    <section class="shop">
+        <h2 class="shop-title">Personal Recommendations</h2>
+        <div id="recommendations" class="carousel slide card-slider" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="shop-row">
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-121.png">
+                                <div>
+                                    <span class="card-product-name">Cough Drop</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.327</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-134.png">
+                                <div>
+                                    <span class="card-product-name">Sporlac</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.105</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="shop-row">
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-121.png">
+                                <div>
+                                    <span class="card-product-name">Cough Drop</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.327</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-134.png">
+                                <div>
+                                    <span class="card-product-name">Sporlac</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.105</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="shop-row">
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-121.png">
+                                <div>
+                                    <span class="card-product-name">Cough Drop</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.327</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-134.png">
+                                <div>
+                                    <span class="card-product-name">Sporlac</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.105</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+            
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+
+                        <div class="card-product">
+                            <a href="">
+                                <img class="card-product-img" src="images/D-130.png">
+                                <div>
+                                    <span class="card-product-name">YOHIMBINUM MT</span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.315</span>
+                                </div>
+                            </a>
+                            <button class="button card-product-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#recommendations" data-bs-slide="prev">
+                    <div class="row-btn previous-button"></div>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#recommendations" data-bs-slide="next">
+                    <div class="row-btn next-button"></div>
+                </button>
+        </div>
+    </section>
+
+    <!-- <section class="shop">
+        <h2 class="shop-title">Best Recommendations</h2>
+        <div class="shop-row">
+            <div class="card-product">
+                <a href="">
+                    <img class="card-product-img" src="images/D-130.png">
+                    <div>
+                        <span class="card-product-name">Gastracid</span>
+                    </div>
+                    <div class="card-product-price-content">
+                        <span class="card-product-content">Best Price* </span>
+                        <span class="card-product-price">Rs.100</span>
+                    </div>
+                </a>
+                <button class="button card-product-btn">ADD TO CART</button>
+            </div>
+
+            <div class="card-product">
+                <a href="">
+                    <img class="card-product-img" src="images/D-116.png">
+                    <div>
+                        <span class="card-product-name">Mupi-XL Ointment</span>
+                    </div>
+                    <div class="card-product-price-content">
+                        <span class="card-product-content">Best Price* </span>
+                        <span class="card-product-price">Rs.156</span>
+                    </div>
+                </a>
+                <button class="button card-product-btn">ADD TO CART</button>
+            </div>
+            <div class="row-btn previous-button"></div>
+            <div class="row-btn next-button"></div>
+        </div>
+    </section> -->
+
+    <section class="guidelines">
+        <h2 class="guidelines-title">Health Advice Articles</h2>
+        <div id="guidelines" class="carousel slide card-slider" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="guidelines-row">
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-100.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-101.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-102.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="guidelines-row">
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-103.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-104.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-115.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="guidelines-row">
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-116.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-118.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                        <div class="guidelines-card">
+                            <a href="https://www.github.com" target="blank">
+                                <img class="guidelines-card-img" src="/public/images/D-119.png">
+                                <span class="guidelines-card-name">Articles Title</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#guidelines" data-bs-slide="prev">
+                <div class="row-btn previous-button"></div>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#guidelines" data-bs-slide="next">
+                <div class="row-btn next-button"></div>
+            </button>
+        </div>
+    </section>
+
+    <!-- <section class="guidelines">
+        <h2 class="guidelines-title">Health Advice Articles</h2>
+        <div class="guidelines-row">
+            <div class="guidelines-card">
+                    <a href="https://www.github.com" target="blank">
+                    <img class="guidelines-card-img" src="images/banner_1.png">
+                    <span class="guidelines-card-name">Articles Title</span>
+                </a>
+            </div>
+            <div class="guidelines-card">
+                <a href="https://www.github.com" target="blank">
+                    <img class="guidelines-card-img" src="images/banner_1.png">
+                    <span class="guidelines-card-name">Articles Title</span>
+                </a>
+            </div>
+            <div class="guidelines-card">
+                <a href="https://www.github.com" target="blank">
+                    <img class="guidelines-card-img" src="images/banner_1.png">
+                    <span class="guidelines-card-name">Articles Title</span>
+                </a>
+            </div>
+            <a href="https://www.github.com" target="blank">
+                <div class="guidelines-card">
+                    <img class="guidelines-card-img" src="images/banner_1.png">
+                    <span class="guidelines-card-name">Articles Title</span>
+                </div>
+            </a>
+            <a href="https://www.github.com" target="blank">
+                <div class="guidelines-card">
+                    <img class="guidelines-card-img" src="images/banner_1.png">
+                    <span class="guidelines-card-name">Articles Title</span>
+                </div>
+            </a>
+            <a href="https://www.github.com" target="blank">
+                <div class="guidelines-card">
+                    <img class="guidelines-card-img" src="images/banner_1.png">
+                    <span class="guidelines-card-name">Articles Title</span>
+                </div>
+            </a>
+            <div class="row-btn previous-button"></div>
+            <div class="row-btn next-button"></div>
+        </div>
+        
+    </section> -->
+
+<% if(likeList !== "flag"){ %>
+    <section class="shop">
+        <h2 class="shop-title">Personal Recommendations</h2>
+        <div class="shop-row">
+            <% for(var i = 0; i < likeList.length && i < 5; i++){ %>
+            <div class="card-product">
+                <a href="/product/<%=likeList[i].barcode%>">
+                    <img class="card-product-img" src="images/<%=likeList[i].barcode%>.png">
+                    <div>
+                        <span class="card-product-name"><%=likeList[i].d_name%></span>
+                    </div>
+                    <div class="card-product-price-content">
+                        <span class="card-product-content">Best Price* </span>
+                        <span class="card-product-price">Rs.<%=likeList[i].price%></span>
+                    </div>
+                </a>
+                <button class="button card-product-btn"><a href="product/<%=likeList[i].barcode%>/order">BUY NOW</a></button>
+            </div>
+            <%}%>
+    </section>
+    <% }%>
+</div>
+
+<%-include('footer');-%>

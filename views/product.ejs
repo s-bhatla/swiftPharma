@@ -1,0 +1,67 @@
+<%-include('header');-%>
+
+    <div class="content">
+
+        <section class="item-display">
+            <div class="item-img">
+                <img  class="item-img img" src="/images/<%=product.barcode%>.png"> <!--data take from DB-->
+            </div>
+            <div class="item-details-column">
+                <div class="title">
+                    <h1 class="item-title"><%=product.d_name%></h1>                           <!--data take from DB-->
+                    <span class="category">category: <%=product.d_category%></span>                    <!--data take from DB-->
+                </div>
+                <div class="item-price-details">
+                    <span class="price">Price: <%=product.price%></span>                          <!--data take from DB-->
+                    <span class="hardcode-content">(Inclusive of all taxes)</span>       <!-- to add a quantity input button-->
+                    <span class="hardcode-content">*This product cannot be returned for a refund or exchange.</span>
+                    <span class="manufacturer">Mkt: <%=product.c_name%></span>        <!--data take from DB-->
+                    <span class="Dosage">Dosage:<%=product.dosage%></span>                      <!--data take from DB-->
+                    <span class="Stock">Stock: <%=product.stock%></span>                        <!--data take from DB-->
+                    <a href="/product/<%=product.barcode%>/order"><button class="button buy-btn" type="button">BUY NOW</button></a>
+                </div>
+                <div class="pincode">
+                    <span>PINCODE:<%=pincode%></span>                       <!--data take from DB-->
+                </div>
+            </div>
+        </section>
+
+        <section class="product-details">                       <!--data take from DB-->
+            <h2 class="title">Product Details</h2>
+            <div column manufacturer-details>
+                <span>Barcode:<%=product.barcode%> </span>
+                <span>Name of Manufacturer/Marketer: <%=company.c_name%></span>                      
+                <span>Company contact no: <%=company.contact_no%></span>               
+                <span>Company Email: <%=company.email%></span>                    
+                <span>Warehouse ID: <%=product.warehouse_no%></span>                     
+                <span>Warehouse Address: <%=waddress.address%></span>               
+                
+            </div>    
+
+        </section>
+
+        <section class="shop Similar-products">
+            <h2 class="shop-title">Similar Products</h2>
+            <div class="shop-row">
+                <% for(var i = 0; i < likeList.length; i++){ %> 
+                <a href="/product/<%=likeList[i].barcode%>">
+                    <div class="card-product">
+                    <img class="card-product-img" src="/images/<%=likeList[i].barcode%>.png">
+                    <div>
+                        <span class="card-product-name"><%=likeList[i].d_name%></span>
+                    </div>
+                    <div class="card-product-price-content">
+                        <span class="card-product-content">Best Price </span>
+                        <span class="card-product-price">Rs.<%=likeList[i].price%></span>
+                    </div>
+                    <a href="/product/<%=likeList[i].barcode%>/order"><button class="button card-product-btn">BUY NOW</button></a>
+                </div>
+                </a>
+                <% } %> 
+                <div class="row-btn previous-button"></div>
+                <div class="row-btn next-button"></div>
+            </div>
+        </section>
+
+
+<%-include('footer');-%>
