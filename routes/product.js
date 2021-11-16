@@ -49,7 +49,7 @@ router.get("/:id/order", checkAuthenticated, async (req, res) => {
     let fullDate = `${day}.${month}.${year}.`;
     let order_id = Date.now().toString()
     try {
-        var queryString = `'${product[0].warehouse_no}', '${order_id}', '${req.user.user_id}','${product[0].barcode}','${product[0].price}','${1}','${fullDate}','${req.user.address}', 'No'`
+        var queryString = `'${product[0].warehouse_no}', '${order_id}', '${req.user.user_id}','${product[0].barcode}','${product[0].price}','${1}','${fullDate}','${req.user.address}', 'Pending'`
         db.promise().query(`INSERT INTO order_hist VALUES(${queryString});`)
     }
     catch(err){
