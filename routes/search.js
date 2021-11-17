@@ -11,7 +11,7 @@ router.get("/byquery/:query", async (req, res) => {
     catch(err){
         console.log(err)
     }
-    queryString = `SELECT * FROM drugs WHERE d_name LIKE '%${req.params.query}%' OR d_category LIKE '%${req.params.query}'`
+    queryString = `SELECT * FROM drugs WHERE d_name LIKE '%${req.params.query}%' OR d_category LIKE '%${req.params.query}%'`
     var result = await db.promise().query(queryString)
     res.render("search.ejs", {list:result[0], query:req.params.query})
 })
