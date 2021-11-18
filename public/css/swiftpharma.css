@@ -50,15 +50,19 @@ a{
   }
   
   .container {
+    /* border: 1px solid black; */
+    font-size: 1.2em;
     padding: 20px;
     text-align: center;
     width: 100%;
   }
   
   .imgcontainer {
+    background-color: #80dbe4;
     height: 200px;
     width: 200px;
     margin: 10px;
+    border-radius: 50%;
   }
 
 .content {
@@ -975,4 +979,81 @@ a{
     margin-top: 10px;
     justify-content: center;
     transition: ease-in-out 200ms !important;
+}
+
+
+/* login styling */
+
+.login {
+
+}
+
+.login-cred {
+    padding: 4px;
+    margin: 0px 4px;
+    border: none;
+    outline: none;
+    border-bottom: 1.2px solid rgba(0, 0, 0, 0.2);
+}
+
+.login-cred:focus {
+    border-bottom: 1.4px solid #5AD3DF;
+    box-shadow: 0 2px 10px -2px #5AD3DF;
+}
+
+.login-btn {
+    height: 60px;
+    width: 100px;
+    font-size: 1.3em;
+    background-image: linear-gradient(#93dce2, #5dcfda);
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 10px;
+}
+
+.checkbox {
+    /* border: 1px solid black; */
+    font-size: 1em;
+}
+
+.cancel {
+    padding: 5px;
+    background-color: #80dbe4;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* register */
+.register {
+    text-align: center;
+}
+
+.reg-cred {
+    outline: none;
+    border: 1.2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.reg-cred:focus {
+    box-shadow: 0 0 12px #5AD3DF;   
+}
+
+.register-btn {
+    font-size: 1.2em;
+    background-image: linear-gradient(#93dce2, #5dcfda);
+    width: 200px;
+    padding: 5px;
+    border: 1px solid rgba(0,0,0, 0.2);
+    color: white;
+    border-radius: 5px;
+    
+}
+
+/* user-profile */
+
+.user-profile div .container-header {
+    text-align: center;
 }
