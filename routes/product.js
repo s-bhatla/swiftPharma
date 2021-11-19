@@ -32,6 +32,10 @@ router.get("/:id", async (req, res) => {
     res.render("product.ejs", {product:productObject[0], likeList : likeObjects[0], pincode:pincode, company:companyObject[0], waddress: warehouseAddress[0]})
 })
 
+router.post("/:id/order", checkAuthenticated, (req, res) => {
+    res.redirect(`/product/${req.params.id}/order?q=${req.body.quantity}`)
+})
+
 router.get("/:id/order", checkAuthenticated, async (req, res) => {
     try {
         db.promise().query(`USE suppliers;`)
@@ -48,8 +52,14 @@ router.get("/:id/order", checkAuthenticated, async (req, res) => {
     let year = date.getFullYear();
     let fullDate = `${day}.${month}.${year}.`;
     let order_id = Date.now().toString()
+    console.log("Meesa here")
+    let quantity = 1
+    if(req.query.q){
+        console.log(req.query.q)
+        quantity = req.query.q
+    }
     try {
-        var queryString = `'${product[0].warehouse_no}', '${order_id}', '${req.user.user_id}','${product[0].barcode}','${product[0].price}','${1}','${fullDate}','${req.user.address}', 'Pending'`
+        var queryString = `'${product[0].warehouse_no}', '${order_id}', '${req.user.user_id}','${product[0].barcode}','${product[0].price}','${quantity}','${fullDate}','${req.user.address}', 'Pending'`
         db.promise().query(`INSERT INTO order_hist VALUES(${queryString});`)
     }
     catch(err){

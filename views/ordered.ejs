@@ -23,7 +23,7 @@
                 <details open>
                   <div class="container-header">
                     <h1 class="header-style">Item</h1>
-                    <div class="card" style="margin: 0 auto; width:20%">
+                    <a href = "/product/<%= order.barcode %>"><div class="card" style="margin: 0 auto; width:20%">
                         <img class="img_card" src="/images/<%= order.barcode %>.png">
                         <br>
                         order_id:<%= orderHist.order_id %>
@@ -40,7 +40,7 @@
                         <br>
                         delivered: <%= orderHist.delivered %>
                         <br>
-                    </div>
+                    </div></a>
                   </div>
                 </details>
               </div>

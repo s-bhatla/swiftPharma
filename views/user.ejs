@@ -66,26 +66,28 @@
         <h1 class="header-style">Order History</h1>
         <div class="history-item-row">
           <% for(var i=orderList.length-1; i>= 0; i--){ %>
-            <div class="history-item-column">
-              <div class="card">
-                <img class="img_card" src="/images/<%=orderList[i].barcode%>.png">
-                <br>
-                order_id:<%= orderList[i].order_id %>
+            <a href="/product/<%=orderList[i].barcode%>">
+              <div class="history-item-column">
+                <div class="card">
+                  <img class="img_card" src="/images/<%=orderList[i].barcode%>.png">
                   <br>
-                  barcode:<%=orderList[i].barcode%>
+                  order_id:<%= orderList[i].order_id %>
                     <br>
-                    price:<%=orderList[i].price%>
+                    barcode:<%=orderList[i].barcode%>
                       <br>
-                      quantity:<%=orderList[i].quantity%>
+                      price:<%=orderList[i].price%>
                         <br>
-                        date of purchase:<%=orderList[i].dt_purch%>
+                        quantity:<%=orderList[i].quantity%>
                           <br>
-                          address:<%=orderList[i].address%>
+                          date of purchase:<%=orderList[i].dt_purch%>
                             <br>
-                            delivered:<%=orderList[i].delivered%>
+                            address:<%=orderList[i].address%>
                               <br>
+                              delivered:<%=orderList[i].delivered%>
+                                <br>
+                </div>
               </div>
-            </div>
+            </a>
             <%} %>
         </div>
       </div>

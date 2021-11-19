@@ -14,12 +14,12 @@
                 <div class="item-price-details">
                     <span class="price">Price: <%=product.price%></span>                          <!--data take from DB-->
                     <span class="hardcode-content">(Inclusive of all taxes)</span>       <!-- to add a quantity input button-->
-                    <span class="hardcode-content">*This product cannot be returned for a refund or exchange.</span>
+                    <span class="hardcode-content">This product cannot be returned for a refund or exchange.</span>
                     <span class="manufacturer">Mkt: <%=product.c_name%></span>        <!--data take from DB-->
                     <span class="Dosage">Dosage:<%=product.dosage%></span>                      <!--data take from DB-->
-                    <form action="input"><input type="number" value="1"></form>
-                    <span class="Stock">Stock: <%=product.stock%></span>                        <!--data take from DB-->
-                    <a href="/product/<%=product.barcode%>/order"><button class="button buy-btn" type="button">BUY NOW</button></a>
+                    <span class="Stock">Stock: <%=product.stock%></span>                      <!--data take from DB-->
+                    <form action="/product/<%=product.barcode%>/order" method="POST"><input type="number" value="1" name="quantity" id="quantity" required>
+                    <button class="button buy-btn" type="submit">BUY NOW</button></form>
                 </div>
                 <div class="pincode">
                     <span>PINCODE:<%=pincode%></span>                       <!--data take from DB-->
