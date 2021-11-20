@@ -17,9 +17,13 @@
                     <span class="hardcode-content">This product cannot be returned for a refund or exchange.</span>
                     <span class="manufacturer">Mkt: <%=product.c_name%></span>        <!--data take from DB-->
                     <span class="Dosage">Dosage:<%=product.dosage%></span>                      <!--data take from DB-->
-                    <span class="Stock">Stock: <%=product.stock%></span>                      <!--data take from DB-->
+                    <%if(product.stock > 0){%>
+                    <span class="Stock">In Stock</span>                      <!--data take from DB-->
                     <span class="quantity"><form action="/product/<%=product.barcode%>/order" method="POST"><input type="number" value="1" min="1" max="9" step="1" name="quantity" id="quantity" required>
                     <button class="button buy-btn" type="submit">BUY NOW</button></form></span>
+                    <% }else{ %>
+                        <span class="Stock">Out of Stock</span>
+                    <% } %> 
                 </div>
                 <div class="pincode">
                     <span>PINCODE:<%=pincode%></span>                       <!--data take from DB-->
