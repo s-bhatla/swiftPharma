@@ -181,9 +181,23 @@ a{
 .user-btn {
     border: none;
     padding: 4px;
-    font-size: 3em;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
     margin-right: 15px;
-    background-color: #87e4bf;   
+    background-color: #87e4bf; 
+    text-align: center;
+}
+
+.user-btn-logged {
+    border: none;
+    padding: 4px;
+    font-size: 3em;
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+    background-color: #87e4bf; 
+    text-align: center;
 }
 
 .sign-in {
@@ -1125,4 +1139,9 @@ a{
     padding: 1px 0;
     color: gray;
     text-align: left;
+}
+
+.login-image {
+    display: block;
+    height: 60px;
 }

@@ -36,12 +36,14 @@
                 </div>
                 <div class="user-content">
                     <%if(!locals.name){%>
-                        <a href="/user"><span> <button class="button user-btn" type="button"> <i class="fa fa-user"> </i> </button></span></a>
+                        <a href="/auths/login"><span> <button class="button user-btn" type="button"><img src="/images/login.png" class="login-image">Login/Register</button></span></a>
                         <%}else if(name === ""){ %>
-                            <a href="/user"><span> <button class="button sign-in" type="button"> <i class="fa fa-sign-in"> </i> </button></span></a>
+                            <div class="user-msg"><a href="/user"> <button class="button user-btn" type="button"> <i class="fa fa-user"> </i> </button></a> </div>
                         <% }else { %>
-                    <div class="user-msg"> <h5 class="hello-user">Hello, <%= name %></h3><a href="/user"> <button class="button user-btn" type="button"> <i class="fa fa-user"> </i> </button></a> </div>
+                    <div class="user-msg"> <h5 class="hello-user">Hello, <%= name %></h5><a href="/user"> <button class="button user-btn-logged" type="button"> <i class="fa fa-user"> </i> </button></a> </div>
                     <% } %>
                 </div>
             </nav>
         </header>
+
+        <!-- <i class="fa fa-user"> </i> -->

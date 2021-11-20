@@ -88,7 +88,11 @@ app.get("/user", checkAuthenticated, async (req, res) => {
     }
     queryString = `SELECT * FROM order_hist WHERE user_id = ${req.user.user_id}`
     var prevOrders = await db.promise().query(queryString)
-    res.render("user.ejs", {user:req.user, orderList:prevOrders[0]})
+    var name=""
+    if(req.isAuthenticated()){
+        name = req.user.username
+    }
+    res.render("user.ejs", {user:req.user, orderList:prevOrders[0], name:name})
 })
 
 function checkAuthenticated(req, res, next){

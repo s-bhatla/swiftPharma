@@ -13,7 +13,12 @@ router.get("/byquery/:query", async (req, res) => {
     }
     queryString = `SELECT * FROM drugs WHERE d_name LIKE '%${req.params.query}%' OR d_category LIKE '%${req.params.query}%'`
     var result = await db.promise().query(queryString)
-    res.render("search.ejs", {list:result[0], query:req.params.query})
+    var name = ""
+    if(req.isAuthenticated()){
+        name = req.user.username
+    }
+    console.log(name)
+    res.render("search.ejs", {list:result[0], query:req.params.query, name: name})
 })
 
 router.post("/byquery", (req, res) => {
@@ -29,7 +34,12 @@ router.get("/bytype/:type", async (req, res) => {
     }
     queryString = `SELECT * FROM drugs WHERE d_type LIKE '%${req.params.type}%'`
     var result = await db.promise().query(queryString)
-    res.render("search.ejs", {list:result[0]})
+    var name = ""
+    if(req.isAuthenticated()){
+        name = req.user.username
+    }
+    console.log(name)
+    res.render("search.ejs", {list:result[0], name:name})
 })
 
 

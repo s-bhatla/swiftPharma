@@ -29,7 +29,11 @@ router.get("/:id", async (req, res) => {
     console.log(warehouseAddress)
     warehouseAddress.push({address:"fill in the db"});
     console.log(companyObject)
-    res.render("product.ejs", {product:productObject[0], likeList : likeObjects[0], pincode:pincode, company:companyObject[0], waddress: warehouseAddress[0]})
+    var name=""
+    if(req.isAuthenticated()){
+        name = req.user.username
+    }
+    res.render("product.ejs", {product:productObject[0], likeList : likeObjects[0], pincode:pincode, company:companyObject[0], waddress: warehouseAddress[0], name:name})
 })
 
 router.post("/:id/order", checkAuthenticated, (req, res) => {
@@ -52,7 +56,6 @@ router.get("/:id/order", checkAuthenticated, async (req, res) => {
     let year = date.getFullYear();
     let fullDate = `${day}.${month}.${year}.`;
     let order_id = Date.now().toString()
-    console.log("Meesa here")
     let quantity = 1
     if(req.query.q){
         console.log(req.query.q)
@@ -65,6 +68,13 @@ router.get("/:id/order", checkAuthenticated, async (req, res) => {
     catch(err){
         console.log(err)
     }
+    try {
+        var alterQuantQuery = `UPDATE drugs SET stock = stock - 1 WHERE stock > 0 AND barcode='${product[0].barcode}';`
+        db.promise().query(alterQuantQuery)
+    }
+    catch(err){
+        console.log(err)
+    }
     var orderDetails = await db.promise().query(`SELECT * FROM order_hist WHERE order_id = ${order_id}`)
     var orderHist = orderDetails[0];
     queryString3 = `SELECT * FROM drugs WHERE barcode = '${req.params.id}'`
@@ -72,7 +82,12 @@ router.get("/:id/order", checkAuthenticated, async (req, res) => {
     productObject = result[0]
     queryString2 = `SELECT * FROM drugs WHERE d_category='${productObject[0].d_category}' AND barcode !='${productObject[0].barcode}';`
     var likeObjects = await db.promise().query(queryString2)
-    res.render("ordered.ejs",{likeList:likeObjects[0], order: productObject[0], orderHist: orderHist[0]})
+    var name=""
+    if(req.isAuthenticated()){
+        name = req.user.username
+    }
+    console.log(name)
+    res.render("ordered.ejs",{likeList:likeObjects[0], order: productObject[0], orderHist: orderHist[0], name:name})
 })
 
 function checkAuthenticated(req, res, next){

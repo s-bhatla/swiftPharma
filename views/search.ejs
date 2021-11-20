@@ -21,10 +21,17 @@
                     <span class="name"><a href="/product/<%= list[i].barcode%>"><%= list[i].d_name %></a></span>
                     <span class="category"><%= list[i].d_category %></span>                               <!--data take from DB-->
                     <span class="price">PRICE : <%= list[i].price %></span>
+                    <%if(list[i].stock > 0){%>
+                        <span class="Stock" style="color:rgb(144, 240, 140)">In Stock</span>
+                        <% }else{ %>
+                            <span class="Stock" style="color:rgb(241, 107, 107)">Out of Stock</span>
+                        <% } %> 
                     <span class="manufacturer">MKD BY : <%= list[i].c_name %></span>
             </div>
-            <button class="button buy-btn" type="button"><a href="/product/<%=list[i].barcode%>/order">BUY</a></button>
-    </div>
+            <%if(list[i].stock > 0){%>
+                <button class="button buy-btn" type="button"><a href="/product/<%=list[i].barcode%>/order">BUY</a></button>
+                <% }%>
+            </div>
     <% } %>
     </section>
     
