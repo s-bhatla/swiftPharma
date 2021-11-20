@@ -12,14 +12,14 @@
                     <span class="category">category: <%=product.d_category%></span>                    <!--data take from DB-->
                 </div>
                 <div class="item-price-details">
-                    <span class="price">Price: <%=product.price%></span>                          <!--data take from DB-->
+                    <span class="price">Price: <span class="💲">₹ <%=product.price%> </span> </span>                          <!--data take from DB-->
                     <span class="hardcode-content">(Inclusive of all taxes)</span>       <!-- to add a quantity input button-->
                     <span class="hardcode-content">This product cannot be returned for a refund or exchange.</span>
                     <span class="manufacturer">Mkt: <%=product.c_name%></span>        <!--data take from DB-->
                     <span class="Dosage">Dosage:<%=product.dosage%></span>                      <!--data take from DB-->
                     <span class="Stock">Stock: <%=product.stock%></span>                      <!--data take from DB-->
-                    <form action="/product/<%=product.barcode%>/order" method="POST"><input type="number" value="1" name="quantity" id="quantity" required>
-                    <button class="button buy-btn" type="submit">BUY NOW</button></form>
+                    <span class="quantity"><form action="/product/<%=product.barcode%>/order" method="POST"><input type="number" value="1" min="1" max="9" step="1" name="quantity" id="quantity" required>
+                    <button class="button buy-btn" type="submit">BUY NOW</button></form></span>
                 </div>
                 <div class="pincode">
                     <span>PINCODE:<%=pincode%></span>                       <!--data take from DB-->
@@ -29,13 +29,13 @@
 
         <section class="product-details">                       <!--data take from DB-->
             <h2 class="title">Product Details</h2>
-            <div column manufacturer-details>
-                <span>Barcode:<%=product.barcode%> </span>
-                <span>Name of Manufacturer/Marketer: <%=company.c_name%></span>                      
-                <span>Company contact no: <%=company.contact_no%></span>               
-                <span>Company Email: <%=company.email%></span>                    
-                <span>Warehouse ID: <%=product.warehouse_no%></span>                     
-                <span>Warehouse Address: <%=waddress.address%></span>               
+            <div class="column manufacturer-details">
+                <div class="😁">Barcode:<span> <%=product.barcode%></span> </div>
+                <div >Name of Manufacturer/Marketer: <span> <%=company.c_name%></span> </div>                      
+                <div class="😁">Company contact no: <span> <%=company.contact_no%></span> </div>               
+                <div >Company Email: <span> <%=company.email%></span> </div>                    
+                <div class="😁">Warehouse ID: <span> <%=product.warehouse_no%></span> </div>                     
+                <div >Warehouse Address: <span> <%=waddress.address%></span> </div>               
                 
             </div>    
 

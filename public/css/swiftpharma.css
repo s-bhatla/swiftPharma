@@ -46,16 +46,16 @@ a{
 }
 
 .container-header {
-    padding: 40px;
-  }
+    /* padding: 20px; */
+}
   
-  .container {
+.container {
     /* border: 1px solid black; */
     font-size: 1.2em;
     padding: 20px;
     text-align: center;
     width: 100%;
-  }
+}
   
   .imgcontainer {
     background-color: #80dbe4;
@@ -706,7 +706,7 @@ a{
     /* border: 1px solid black; */
     padding: 0;
     width: 96%;
-    margin: 0 1em;
+    margin: 1em;
     border-radius: 10px;
 }
 
@@ -758,11 +758,14 @@ a{
 .item-price-details .price {
     font-size: 1.5em;
     font-weight: bolder;
+    /* border: 1px solid red;   */
 }
 
-.item-price-details .price::after {
+.item-price-details .price .💲 {
+    display: inline;
+    /* border: 1px solid black; */
     color: rgb(213, 81, 116);
-    font-size: 1.55em;
+    font-size: 1.3em;
 }
 
 .item-price-details .hardcode-content {
@@ -773,6 +776,13 @@ a{
     color: black;
     font-size: 1.2em;
     margin: 5px 0 2px 0;
+}
+
+.item-price-details .quantity form input[type="number"] {
+    display: block;
+    width: 5em;
+    border: 1px solid rgba(0,0,0, .8);  
+    font-size: 1.2em;
 }
 
 .item-price-details .buy-btn {
@@ -815,7 +825,7 @@ a{
 
 }
 
-.product-details span {
+.manufacturer-details div {
     display: block;
     /* border: 1px solid yellow; */
     padding: 10px;
@@ -824,8 +834,16 @@ a{
     color: gray;
 }
 
-.product-details span::after{
+.😁 {
+    background-color: rgba(113, 121, 140, 0.1);
+    border-radius: 4px;
+}
+
+
+.product-details div span{
     float: right;
+    font-size: 1em;
+    color: gray;
 }
 
 .card {
@@ -857,7 +875,7 @@ a{
   
   /* Remove extra left and right margins, due to padding in columns */
   .history-item-row {
-      margin: 0 -5px;
+      margin: 0 5px;
     }
   
   /* Clear floats after the columns */
@@ -1056,4 +1074,55 @@ a{
 
 .user-profile div .container-header {
     text-align: center;
+}
+
+.content .container-header {
+    text-align: center;
+}
+
+.content .container-header .avatar {
+    background-color: white !important;
+    height: 200px;
+}
+
+.return {
+    font-size: 1.2em;
+    background-image: linear-gradient(#93dce2, #5dcfda);
+    padding: 10px;
+    border: 1px solid rgba(0,0,0, 0.2);
+    color: white;
+    border-radius: 5px;
+    margin-top: 5px;    
+}
+
+.container-header .result-block {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items:flex-start;
+}
+
+.container-header .result-block div {
+    display: inline;
+}
+
+.container-header .result-block div span{
+    display: block;
+    padding: 4px;
+    color: gray;
+}
+
+.logout {
+    font-size: 1em;
+    background-image: linear-gradient(#da8070, #dd5947);
+    padding: 10px;
+    border: 1px solid rgba(0,0,0, 0.2);
+    color: white;
+    border-radius: 5px;
+    margin-top: 5px; 
+}
+
+.card span {
+    padding: 1px 0;
+    color: gray;
+    text-align: left;
 }

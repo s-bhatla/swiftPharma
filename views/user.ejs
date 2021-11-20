@@ -1,62 +1,62 @@
 <%-include('header');-%>
   <div class="content">
 
-    <section class="user-profile">
+    <section>
       <div>
         <div class="container-header">
           <h1 class="header-style">User Information</h1>
-          <form id="formr" action="/">
-            <div class="container">
-              <span class="container">
-                <label for="User"><b>User:</b>
-                  <%= user.username %>
-                </label>
-              </span>
-            </div>
-            <hr>
-            <div class="container">
+            <form id="formr" action="/">
               <div class="container">
-                <label for="add"><b>Address:</b>
-                  <%= user.address %>
+                <span class="container">
+                  <label for="User"><b>User:</b>
+                    <%= user.username %>
+                  </label>
+                </span>
+              </div>
+              <hr>
+              <div class="container">
+                <div class="container">
+                  <label for="add"><b>Address:</b>
+                    <%= user.address %>
+                  </label>
+                </div>
+                <span class="container">
+                  <label for="city"><b>City:</b>
+                    <%= user.city %>
+                  </label>
+                </span>
+                <span class="container">
+                  <label for="state"><b>State:</b>
+                    <%= user.state %>
+                  </label>
+                </span>
+                <span class="container">
+                  <label for="pinc"><b>Pincode:</b>
+                    <%= user.pincode %>
+                  </label>
+                </span>
+              </div>
+              <hr>
+              <div class="container">
+                <label for="eid"><b>Email-ID:</b>
+                  <%= user.email %>
                 </label>
               </div>
-              <span class="container">
-                <label for="city"><b>City:</b>
-                  <%= user.city %>
-                </label>
-              </span>
-              <span class="container">
-                <label for="state"><b>State:</b>
-                  <%= user.state %>
-                </label>
-              </span>
-              <span class="container">
-                <label for="pinc"><b>Pincode:</b>
-                  <%= user.pincode %>
-                </label>
-              </span>
-            </div>
-            <hr>
-            <div class="container">
-              <label for="eid"><b>Email-ID:</b>
-                <%= user.email %>
-              </label>
-            </div>
 
-            <div class="container">
-              <label for="pno"><b>Phone no:</b>
-                <%= user.phone_no %>
-              </label>
-            </div>
-
-            <div class="container">
-              <a href="/"><button type="submit">Return to home page</button></a>
-            </div>
-          </form>
+              <div class="container">
+                <label for="pno"><b>Phone no:</b>
+                  <%= user.phone_no %>
+                </label>
+              </div>
+            </form>  
+          <div class="container">
+            <a href="/"><button class="button return" type="submit">Return to home page</button></a>
+          </div>
           <div class="container">
             <form action='/logout?_method=DELETE' method="POST">
-              <button type='submit'>Log Out</button>
+              <button class="button logout" type='submit'>Log Out</button>
             </form>
+          </div>
           </div>
         </div>
     </section>
@@ -70,21 +70,13 @@
               <div class="history-item-column">
                 <div class="card">
                   <img class="img_card" src="/images/<%=orderList[i].barcode%>.png">
-                  <br>
-                  order_id:<%= orderList[i].order_id %>
-                    <br>
-                    barcode:<%=orderList[i].barcode%>
-                      <br>
-                      price:<%=orderList[i].price%>
-                        <br>
-                        quantity:<%=orderList[i].quantity%>
-                          <br>
-                          date of purchase:<%=orderList[i].dt_purch%>
-                            <br>
-                            address:<%=orderList[i].address%>
-                              <br>
-                              delivered:<%=orderList[i].delivered%>
-                                <br>
+                  <span>Order id :<%= orderList[i].order_id %></span>
+                  <span>Barcode :<%=orderList[i].barcode%></span>
+                  <span>Price :₹<%=orderList[i].price%></span>
+                  <span>Quantity :<%=orderList[i].quantity%></span>
+                  <span>Date of purchase :<%=orderList[i].dt_purch%></span>
+                  <span>Address :<%=orderList[i].address%></span>
+                  <span>Delivered :<%=orderList[i].delivered%></span>
                 </div>
               </div>
             </a>
