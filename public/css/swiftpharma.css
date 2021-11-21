@@ -782,6 +782,10 @@ a{
     font-size: 1.3em;
 }
 
+.hardcode-content-mode{
+    color: gray;
+}
+
 .item-price-details .hardcode-content {
     padding: 2px 0;
 }

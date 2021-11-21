@@ -37,7 +37,13 @@ router.get("/:id", async (req, res) => {
 })
 
 router.post("/:id/order", checkAuthenticated, (req, res) => {
-    res.redirect(`/product/${req.params.id}/order?q=${req.body.quantity}`)
+    console.log(req.body.payment)
+    if(req.body.payment.toLowerCase() === 'netbanking'){
+        res.redirect(`/product/${req.params.id}/order?q=${req.body.quantity}&m=netbanking`);
+    }else if(req.body.payment.toLowerCase() === 'cash on delivery'){
+        res.redirect(`/product/${req.params.id}/order?q=${req.body.quantity}&m=cashondelivery`);
+    }
+    
 })
 
 router.get("/:id/order", checkAuthenticated, async (req, res) => {
@@ -64,6 +70,21 @@ router.get("/:id/order", checkAuthenticated, async (req, res) => {
     try {
         var queryString = `'${product[0].warehouse_no}', '${order_id}', '${req.user.user_id}','${product[0].barcode}','${product[0].price}','${quantity}','${fullDate}','${req.user.address}', 'Pending'`
         db.promise().query(`INSERT INTO order_hist VALUES(${queryString});`)
+    }
+    catch(err){
+        console.log(err)
+    }
+    try {
+        paydt = "";
+        paymode="Cash on Delivery"
+        if(req.query.m){
+            if(req.query.m === 'netbanking'){
+                paymode = "Netbanking"
+                paydt = fullDate;
+            }
+        }
+        var queryStringPay = `'${order_id}','${paydt}','${paymode}'`
+        db.promise().query(`INSERT INTO payment VALUES(${queryStringPay});`)
     }
     catch(err){
         console.log(err)

@@ -18,8 +18,15 @@
                     <span class="manufacturer">Mkt: <%=product.c_name%></span>        <!--data take from DB-->
                     <span class="Dosage">Dosage:<%=product.dosage%></span>                      <!--data take from DB-->
                     <%if(product.stock > 0){%>
-                    <span class="Stock">In Stock</span>                      <!--data take from DB-->
-                    <span class="quantity"><form action="/product/<%=product.barcode%>/order" method="POST"><input type="number" value="1" min="1" max="9" step="1" name="quantity" id="quantity" required>
+                    <span class="Stock"style="color:rgb(73, 172, 70)">In Stock</span>                      <!--data take from DB-->
+                    <span class="quantity"><form action="/product/<%=product.barcode%>/order" method="POST">
+                        <input type="number" value="1" min="1" max="9" step="1" name="quantity" id="quantity" required>
+                        <div class="hardcode-content-mode">Mode of payment
+                        <input type="text" list="pay" id="payment" name="payment" required>
+                        <datalist id="pay">
+                        <option value="Cash on Delivery">Cash on Delivery</option>
+                        <option value="Netbanking">Netbanking</option>
+                        </datalist></div><br>
                     <button class="button buy-btn" type="submit">BUY NOW</button></form></span>
                     <% }else{ %>
                         <span class="Stock" style="color:rgb(241, 107, 107)">Out of Stock</span>
