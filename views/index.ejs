@@ -635,22 +635,62 @@
 <% if(likeList !== "flag"){ %>
     <section class="shop">
         <h2 class="shop-title">Personal Recommendations</h2>
-        <div class="shop-row">
-            <% for(var i = 0; i < likeList.length && i < 4; i++){ %>
-            <div class="card-product">
-                <a href="/product/<%=likeList[i].barcode%>">
-                    <img class="card-product-img" src="images/<%=likeList[i].barcode%>.png">
-                    <div>
-                        <span class="card-product-name"><%=likeList[i].d_name%></span>
+        <div id="personal-rec" class="carousel slide card-slider" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <% for(var i = 0; i < likeList.length; i+= 4){ %>
+                    <%if(i === 0){%>
+                <div class="carousel-item active">
+                    <div class="shop-row">
+                        <%for(var j = 0; j < 4; j++){%>
+                        <div class="card-product">
+                            <a href="/product/<%=likeList[j].barcode%>">
+                                <img class="card-product-img" src="images/<%=likeList[j].barcode%>.png">
+                                <div>
+                                    <span class="card-product-name"><%=likeList[j].d_name%></span>
+                                </div>
+                                <div class="card-product-price-content">
+                                    <span class="card-product-content">Best Price* </span>
+                                    <span class="card-product-price">Rs.<%=likeList[j].price%></span>
+                                </div>
+                            </a>
+                            <a href="/product/<%=likeList[j].barcode%>/order">
+                            <button class="button card-product-btn">BUY</button></a>
+                        </div>
+                        <%}%>
                     </div>
-                    <div class="card-product-price-content">
-                        <span class="card-product-content">Best Price* </span>
-                        <span class="card-product-price">Rs.<%=likeList[i].price%></span>
+                </div>
+                <%}else{%>
+                <div class="carousel-item">
+                    <div class="shop-row">
+                        <%for(var j = i; j < i+4 && j < likeList.length; j++){%>
+                            <div class="card-product">
+                                <a href="/product/<%=likeList[j].barcode%>">
+                                    <img class="card-product-img" src="images/<%=likeList[j].barcode%>.png">
+                                    <div>
+                                        <span class="card-product-name"><%=likeList[j].d_name%></span>
+                                    </div>
+                                    <div class="card-product-price-content">
+                                        <span class="card-product-content">Best Price* </span>
+                                        <span class="card-product-price">Rs.<%=likeList[j].price%></span>
+                                    </div>
+                                </a>
+                                <a href="/product/<%=likeList[j].barcode%>/order">
+                                <button class="button card-product-btn">BUY</button></a>
+                            </div>
+                        <%}%>
                     </div>
-                </a>
-                <button class="button card-product-btn"><a href="product/<%=likeList[i].barcode%>/order">BUY NOW</a></button>
+                </div>
+                <%}%>
+                <%}%>
+                
             </div>
-            <%}%>
+            <button class="carousel-control-prev" type="button" data-bs-target="#personal-rec" data-bs-slide="prev">
+                    <div class="row-btn previous-button"></div>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#personal-rec" data-bs-slide="next">
+                    <div class="row-btn next-button"></div>
+                </button>
+        </div>
     </section>
     <% }%>
 </div>
