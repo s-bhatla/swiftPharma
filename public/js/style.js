@@ -73,3 +73,14 @@ function bannerloop() {
         bannerStatus = 1;
     }
 }
+
+function jump_fun(){
+    if(document.getElementById("payment").value == "Cash on Delivery"){
+      console.log("hello");
+    }
+
+    if (document.getElementById("payment").value == "Netbanking") {
+        console.log("netbanking over here eh")
+      window.open("https://paytm.com/");
+    }
+}
