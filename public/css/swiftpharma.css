@@ -52,7 +52,7 @@ a{
 .container {
     /* border: 1px solid black; */
     font-size: 1.2em;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     width: 100%;
 }
@@ -169,7 +169,7 @@ a{
 
 .button {
     text-align: center;
-    vertical-align: middle;
+    vertical-align: middle !important;
     padding: 0.50em;
     cursor: pointer;
 }
@@ -782,7 +782,11 @@ a{
     font-size: 1.3em;
 }
 
-.hardcode-content-mode{
+.payment{
+    display: block;
+    margin: 4px 0;
+    font-size: 1.2em;
+    align-items: center;
     color: gray;
 }
 
@@ -1021,7 +1025,12 @@ a{
 /* login styling */
 
 .login {
-
+    /* border: 1px solid black; */
+    display: flex;
+    margin: 0 !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    width: 100%;
 }
 
 .login-cred {
@@ -1038,9 +1047,10 @@ a{
 }
 
 .login-btn {
-    height: 60px;
+    padding: 5px !important;
+    height: 50px;
     width: 100px;
-    font-size: 1.3em;
+    font-size: 1.2em;
     background-image: linear-gradient(#93dce2, #5dcfda);
     color: white;
     font-weight: bolder;
@@ -1048,7 +1058,19 @@ a{
     border-radius: 10px;
 }
 
+.login-btn:hover {
+    background-image: linear-gradient(#76d8e0, #3fcdda);
+
+}
+
+.login .container-header {
+    display: flexbox;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+ 
 .checkbox {
+    display: block;
     /* border: 1px solid black; */
     font-size: 1em;
 }
@@ -1062,8 +1084,19 @@ a{
     margin-bottom: 5px;
 }
 
+.login-box {
+    width: max-content;
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px auto !important;
+}
+
 /* register */
 .register {
+    margin: 0px auto !important;
+    width: max-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
