@@ -8,3 +8,9 @@ function, ordering medicine, search function and recommendations based
 on past orders by the user.***
 
 ### Here are a few screenshots from the website.
+
+![sp3](https://user-images.githubusercontent.com/67830226/148942720-00b1297b-3dbf-488e-9846-3ad511b1da8a.png)
+![sp4](https://user-images.githubusercontent.com/67830226/148942727-49447b90-8946-48aa-a4e3-fc5947c53c21.png)
+![sp5](https://user-images.githubusercontent.com/67830226/148942735-bfb220f0-7fe5-46b6-a62c-f144efc69633.png)
+![sp1](https://user-images.githubusercontent.com/67830226/148942743-3357a2ec-f03d-4521-9082-a4aec53cdf26.png)
+![sp2](https://user-images.githubusercontent.com/67830226/148942756-f57ad0ae-c81e-47ce-8262-b0e0e9803dd4.png)
