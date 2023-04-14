@@ -7,6 +7,8 @@ The website offers various functionalities such as a ***login/register
 function, ordering medicine, search function and recommendations based
 on past orders by the user.***
 
+Here is the link for a front-end only preview of the website :- https://s-bhatla.github.io/swiftpharma-frontend/
+
 ### Here are a few screenshots from the website.
 
 ![sp3](https://user-images.githubusercontent.com/67830226/148942720-00b1297b-3dbf-488e-9846-3ad511b1da8a.png)
